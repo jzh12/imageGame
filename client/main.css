@@ -1,0 +1,194 @@
+html {
+  background-color: #f0ede8;
+}
+
+input {
+  font-family: 'Lucida Console';
+  font-size: 15px;
+}
+
+div, button {
+  font-family: 'Lucida Console';
+  font-size: 20px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 1em;
+  font-size: 18px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.stars {
+  float:left;
+}
+
+.checked {
+  color: orange;
+}
+
+#statsContainer {
+  float:right;
+  padding-right: 2em;
+  height: 100vh;
+  width: 20vh;
+}
+
+#homescreen {
+  top: 15%;
+  left: 35%;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+#gamescreen {  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#secondGameScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.progressBar {
+ 
+  margin:auto;
+  width: 400px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+  border: 1px solid #ccc;
+  top: 40%;
+  left: 50%; 
+}
+
+.images {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width:500px;
+  height:500px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.draggable {
+  position: absolute;
+  user-select:none;
+  border:1px solid #000;
+
+}
+
+#drop-area {
+  width: 200px;
+  height: 100px;
+  background-color: #e74c3c;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+}
+
+#image5 {
+  width: 500px;
+  height: 500px;
+  --Xpos: 50vw;
+  --Ypos: 50vh;
+}
+#image5:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 9em at var(--Xpos) var(--Ypos),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+/* #flashlight {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+} */
+
+
+.progressLevelIncomplete {
+  background-color: #fb6767;
+  color: black;
+  transition: background-color 0.5s ease-in-out;
+}
+.progressLevelComplete {
+  background-color: rgb(143, 250, 143);
+  color: black;
+
+}
+
+#level1Text, #level2Text, #level3Text, #level4Text, #level5Text {
+  font-family: 'Lucida Console';
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 5%;
+
+}
+
+#finishscreen {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.close {
+  float: left;
+}
+#share {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+#twitterButton {
+  background-color: #1DA1F2;
+  color:white;
+  align-items: center;
+  justify-content: center;
+}        

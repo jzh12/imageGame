@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+        <meta charset="UTF-8" />
+        <title>Image Game</title>
+        <script type="module" src="main.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="stars">
+            <span id='star1' class="fa fa-star"></span>
+            <span id='star2' class="fa fa-star"></span>
+            <span id='star3' class="fa fa-star"></span>
+            <span id='star4' class="fa fa-star"></span>
+            <span id='star5' class="fa fa-star"></span>
+            <!-- <label for="starvalue">Feedback: </label><input type="text" id="starvalue" /> -->
+            <label for="starvalue">Feedback </label><input type="number" id="starvalue" min="1" max="5" />
+            <input type="button" value="Confirm Rating" id="playRating" />
+            <input type="button" value="Reset rating" id="resetRating" />
+        </div>
+        <div id="statsContainer">
+            <div id="avgStars">
+                <input type="button" value="Click for average star rating" id="avgRating" />
+                <p id="avgStarText"></p>
+            </div>
+            <div id="sessionTopScores">
+                <div id="sessionScores">
+
+                </div>
+                <label for="timeDeletion">Delete a time: </label><input type="text" id="timeDeletion" />
+                <input type="button" value="Delete" id="confirmTimeDeletion" />
+                <input type="button" value="Clear session times" id="clearSession" />
+            </div>
+        </div>
+
+        <center>
+        <div id="homescreen">
+            <h1>Welcome to the Image Game!</h1>
+            <button id="play">Click Here to Play</button>
+        </div>
+        </center>
+
+        <div id="gamescreen">
+            <div class="progressBar" id="progressBar">
+                <div class="progressLevelIncomplete" id="level1"></div>
+                <div class="progressLevelIncomplete" id="level2"></div>
+                <div class="progressLevelIncomplete" id="level3"></div>
+                <div class="progressLevelIncomplete" id="level4"></div>
+                <div class="progressLevelIncomplete" id="level5"></div>
+            </div>
+                    <div id="image1">
+                        <map name="bunny">
+                            <area id="bunnyArea" shape="rect" coords="122,350,166,325" alt="Bunny">
+                        </map>
+                        <p>Level 1: Click the bunny on the screen!</p>
+                        <image class='images' id='bunnyImage' src="91ZDVwjiUOL._AC_UF1000,1000_QL80_.jpg" usemap="#bunny" alt="Bunny Image"></image>
+                    </div>
+                    <div id="image2">
+                        <map name="carrot">
+                            <area id="carrotArea" shape="rect" coords="223,40,239,34">
+                        </map>
+                        <p>Level 2: Click the carrot on screen!</p>
+                        <image class='images' id='carrotBunny' src="secondlevel.jpg" usemap="#carrot"> </image>
+                    </div>
+                    <div id="image3">
+                        <map name="saturatedcarrot">
+                            <area id="saturatedArea" shape="rect" coords="223,40,239,34">
+                        </map>
+                        <p>Level 3: Can you find the carrot now?</p>
+                        <image class='images' id='carrotBunny' src="saturatedimage.png" usemap="#saturatedcarrot"> </image>
+                    </div>
+                    <div id="image4">
+                        <p>Level 4: Drag the watering can over the image, then click!?</p>
+                        <div id="fourthImageContainer">
+                            <image class='images' id='wordImage' src="embedded.jpg"></image>
+                            <image id="draggableImage" src="watercan.jpg" draggable="true"> </image>
+                        </div>
+                    </div>
+                    <p id="5thText">Level 5: Find and click the face!</p>
+                    
+                    <div id="image5">
+                        <map name="clickFace">
+                                <area id="faceArea" shape="circle" coords="45,435,56,435">
+                        </map>
+                        <image src="IMG_2641_500x500.png" id="finalImage" usemap="#clickFace"></image>
+                       
+                        <image src="IMG_2642_500x500.png" id="completion"></image>
+                    </div> 
+            </div>
+        </div>
+        <div id="finishscreen">
+            <button id="closeButton">Close</button>
+            <p>Congratulations for beating the game!</p>
+            <p id="elapsedTime"></p>
+        </div>
+        <div id="share">
+            <div id="twitter">
+                <button id="twitterButton">Tweet</button>
+            </div>
+            <div id="instagram"><button id="instaButton">
+
+                </button>
+            </div>
+            <div id="copy">
+                <button id="copyButton">
+
+                </button>
+            </div>
+        </div>
+        
+        <!-- possibly add stuff for accessibility, dark mode, etc. -->
+
+    </body>
+</html>
